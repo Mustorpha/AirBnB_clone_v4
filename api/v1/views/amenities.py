@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Flask route that returns json respone
+    Flask route which returns json respone
 """
 from api.v1.views import app_views
 from flask import abort, jsonify, request
@@ -12,7 +12,7 @@ from flasgger.utils import swag_from
 @swag_from('swagger_yaml/amenities_no_id.yml', methods=['GET', 'POST'])
 def amenities_no_id(amenity_id=None):
     """
-        amenities route that handles http requests no ID given
+        amenities route handling http requests no ID given
     """
     if request.method == 'GET':
         all_amenities = storage.all('Amenity')
@@ -35,7 +35,7 @@ def amenities_no_id(amenity_id=None):
 @swag_from('swagger_yaml/amenities_id.yml', methods=['GET', 'DELETE', 'PUT'])
 def amenities_with_id(amenity_id=None):
     """
-        amenities route that handles http requests with ID given
+        amenities route that handling http requests with ID given
     """
     amenity_obj = storage.get('Amenity', amenity_id)
     if amenity_obj is None:
