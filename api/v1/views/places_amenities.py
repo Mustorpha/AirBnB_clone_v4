@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Flask route that returns json status response
+Flask route whcih returns json status response
 """
 from api.v1.views import app_views
 from flask import abort, jsonify, request
@@ -12,7 +12,7 @@ STORAGE_TYPE = environ.get('HBNB_TYPE_STORAGE')
 @app_views.route('/places/<place_id>/amenities', methods=['GET'])
 def amenities_per_place(place_id=None):
     """
-        reviews route to handle http method for requested reviews by place
+        reviews route that'll handle http method for requested reviews by place
     """
     place_obj = storage.get('Place', place_id)
 
@@ -37,7 +37,7 @@ def amenities_per_place(place_id=None):
                  methods=['DELETE', 'POST'])
 def amenity_to_place(place_id=None, amenity_id=None):
     """
-        reviews route to handle http methods for given review by ID
+        reviews route that'll handle http methods for given review by ID
     """
     place_obj = storage.get('Place', place_id)
     amenity_obj = storage.get('Amenity', amenity_id)
