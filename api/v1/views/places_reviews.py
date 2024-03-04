@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Flask route that returns json status response
+Flask route which returns json status response
 """
 from api.v1.views import app_views
 from flask import abort, jsonify, request
@@ -12,7 +12,7 @@ from models import storage, CNC
 @swag_from('swagger_yaml/reviews_by_place.yml', methods=['GET', 'POST'])
 def reviews_per_place(place_id=None):
     """
-        reviews route to handle http method for requested reviews by place
+        reviews route that'll handle http method for requested reviews by place
     """
     place_obj = storage.get('Place', place_id)
 
@@ -49,7 +49,7 @@ def reviews_per_place(place_id=None):
 @swag_from('swagger_yaml/reviews_id.yml', methods=['GET', 'DELETE', 'PUT'])
 def reviews_with_id(review_id=None):
     """
-        reviews route to handle http methods for given review by ID
+        reviews route that'll handle http methods for given review by ID
     """
     review_obj = storage.get('Review', review_id)
 
