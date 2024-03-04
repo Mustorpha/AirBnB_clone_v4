@@ -203,6 +203,7 @@ create: create [ARG] [PARAM 1] [PARAM 2] ...
 
 ## Authors
  * Mustorpha Jamiu, [@theBigmuse](https://github.com/mustorpha)
+ * Victor Ukpngette, [@theBigmuse](https://github.com/MrVeeJon)
 
 ## License
 
